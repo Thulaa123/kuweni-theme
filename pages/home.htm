@@ -13,9 +13,9 @@ function onStart()
 {
     $this["hash"] = Session::get("res_id");
     $this["customer"] = Customer::where("hash", "=", $this["hash"])->first();
-    if ($this["customer"] == "") {
-        return Redirect::to("/validate");
-    }
+    //if ($this["customer"] == "") {
+    //     return Redirect::to("/validate");
+    //}
 }
 ?>
 ==

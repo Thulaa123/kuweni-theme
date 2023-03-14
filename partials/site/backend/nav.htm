@@ -1,17 +1,20 @@
- <div class="main-sidebar">
+ <div class="main-sidebar bg-black">
         <div
-          class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-white dark:border-navy-700 dark:bg-navy-800">
+          class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-black">
           <!-- Application Logo -->
-          <div class="flex pt-4">
+          <div class="logo-container">
+            <div class="flex">
             <a href="/">
-              <img class="h-11 w-11 transition-transform duration-500 ease-in-out"
+              <img class="h-12 w-12 transition-transform duration-500 ease-in-out"
                 src="{{ 'assets/img/cir.png' | theme }}" alt="logo" />
             </a>
           </div>
+          </div>
+          
 
-          <div class="h-7 w-7">
+          <div class="h-7 w-7 pt-8 lg:hidden">
             <button
-              class="menu-toggle ml-0.5 flex h-7 w-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
+              class="menu-toggle ml-0.5 flex h-7 w-7 pt-8 flex-col justify-center space-y-1.5 outline-none focus:outline-none text-grey-100"
               :class="$store.global.isSidebarExpanded && 'active'"
               @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
               <span></span>
@@ -20,12 +23,11 @@
             </button>
           </div>
 
-
           <!-- Main Sections Links -->
-          <div class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6">
-            <!-- Dashobards -->
+          <div class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6 bg-black">
+            <!-- Dashboards -->
             <a href="{{ 'res-details' | theme }}"
-              class="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
+              class="flex h-11 w-11 items-center justify-center rounded-lg text-grey-100"
               x-tooltip.placement.right="'Home'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -42,7 +44,7 @@
             </a>
             <!-- Pages And Layouts -->
             <a href="{{ 'support' | theme }}"
-              class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+              class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-grey/30 focus:bg-grey/20 active:bg-grey/25 text-white"
               x-tooltip.placement.right="'Support'">
               <svg class="h-7 w-7" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -119,9 +121,9 @@
     </div>
 
     <!-- App Header Wrapper-->
-    <nav class="header print:hidden">
+    <nav class="header print:hidden bg-black">
       <!-- App Header  -->
-      <div class="header-container relative flex w-full bg-white dark:bg-navy-750 print:hidden">
+      <div class="header-container relative flex w-full bg-black print:hidden">
         <!-- Header Items -->
         <div class="flex w-full items-center justify-between">
           <!-- Left: Sidebar Toggle Button -->
