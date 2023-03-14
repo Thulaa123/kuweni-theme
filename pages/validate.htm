@@ -1,0 +1,44 @@
+url = "/validate"
+layout = "default-front"
+title = "validate"
+
+[checkres]
+==
+<!-- Page Wrapper -->
+  <div id="root" class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900" x-cloak>
+    <main class="grid w-full grow grid-cols-1 place-items-center">
+      <div class="w-full max-w-[26rem] p-4 sm:px-5">
+        <div class="text-center">
+          <img class="mx-auto" src="{{ 'assets/img/logo.svg' | theme }}" alt="logo" style="height: 4rem !important;"/>
+          <div class="mt-4">
+            <h2 class="text-2xl font-semibold text-slate-600 dark:text-navy-100">
+              Welcome back
+            </h2>
+            <p class="text-slate-400 dark:text-navy-300">
+              Lets start validating your reservation
+            </p>
+          </div>
+        </div>
+        <form data-request="onCheck" data-request-validate data-request-flash>
+            <div class="card mt-5 rounded-lg p-5 lg:p-7">
+            <label class="block">
+                <span>Reservation ID</span>
+                <span class="relative mt-1.5 flex">
+                <input
+                    class="form-input peer w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 hover:z-10 hover:border-slate-400 focus:z-10 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                    placeholder="Enter Reservation ID" type="text" name="resID"/>
+                </span>
+            </label>
+            
+            <button
+                class="btn mt-5 w-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90" type="submit" data-attach-loading>
+                Check
+            </button>
+            <div class="mt-8 flex justify-center text-xs text-slate-400 dark:text-navy-300">
+                <a href="#">Empowered By CL Labs</a>
+            </div>
+            </div>
+        </form>
+      </div>
+    </main>
+  </div>

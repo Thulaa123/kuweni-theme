@@ -1,0 +1,41 @@
+url = "/scan"
+layout = "default"
+title = "scan"
+
+[qrscanner]
+==
+<div class="bgv">
+  <video id="videooo" autoplay muted loop>
+    <source src="https://uploads-ssl.webflow.com/63f1acb20b3cfe7ae5172180/63f1afc4e5b3e0e2d9912881_20230219-104203-314-transcode.mp4" type="video/mp4">
+    <!-- include additional source elements for different video formats -->
+  </video>
+</div>
+<div class="bg">
+  <img class="left-img" src="{{ 'assets/img/des.png' | theme}}">
+  <img class="right-img" src="{{ 'assets/img/des.png' | theme}}">
+</div>
+<div class="main d-flex justify-content-center align-items-center">
+  <img class="logomain" src="{{ 'assets/img/logo.svg' | theme }}" height="50px">
+  <div class="card">
+    <div class="card-body">
+      <div id="reader" width="700px"></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="alert" tabindex="-1" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ticket Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="res">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
