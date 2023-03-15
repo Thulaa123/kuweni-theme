@@ -20500,7 +20500,7 @@
             isRightSidebarExpanded: !1,
             init: function () {
               var e = this,
-                t = !0;
+                t = !1;
               (this.isDarkModeEnabled = Alpine.$persist(!1).as(
                 "_x_darkMode_on"
               )),

@@ -618,7 +618,7 @@ nav.header {
 }
 
 .dark nav.header {
-  border-color: #26334d;
+  border-color: black;
 }
 
 @media (min-width: 768px) {
@@ -638,7 +638,7 @@ nav.header:before {
 }
 
 .dark nav.header:before {
-  background-color: #222e45;
+  background-color: black;
 }
 
 nav.header .header-container {
@@ -670,11 +670,11 @@ nav.header .header-container {
 
 @supports ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) or (-webkit-backdrop-filter: blur(0)) {
   .is-header-blur nav.header .header-container {
-    background-color: hsla(0, 0%, 100%, 0.9);
+    background-color: rgb(23, 23, 23);
   }
 
   .dark .is-header-blur nav.header .header-container {
-    background-color: rgba(34, 46, 69, 0.9) !important;
+    background-color: rgb(23, 23, 23) !important;
   }
 }
 
@@ -802,7 +802,7 @@ code.inline-code {
 .dark .card {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  background-color: #26334d;
+  background-color: rgb(255 255 255 / 20%);
   color: #a3adc2;
 }
 
@@ -1805,7 +1805,7 @@ code.inline-code {
 }
 
 .dark .input-active .ts-control {
-  border-color: #5f5af6;
+  border-color: #465675;
 }
 
 .ts-control,
@@ -1879,7 +1879,7 @@ code.inline-code {
 .dark .ts-dropdown .active,
 .dark .ts-dropdown .create:hover,
 .dark .ts-dropdown .option:hover {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .ts-dropdown .active.create,
@@ -2510,7 +2510,7 @@ code.inline-code {
 }
 
 .dark .tippy-box[data-theme~="primary"] {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .tippy-box[data-theme~="primary"]>.tippy-svg-arrow svg {
@@ -2518,7 +2518,7 @@ code.inline-code {
 }
 
 .dark .tippy-box[data-theme~="primary"]>.tippy-svg-arrow svg {
-  color: #5f5af6;
+  color: #465675;
 }
 
 .tippy-box[data-theme~="secondary"] {
@@ -5990,8 +5990,8 @@ span.flatpickr-weekday {
 .dark .flatpickr-day.startRange.prevMonthDay,
 .dark .flatpickr-day.startRange:focus,
 .dark .flatpickr-day.startRange:hover {
-  background-color: #5f5af6 !important;
-  border-color: #5f5af6;
+  background-color: #465675 !important;
+  border-color: #465675;
   color: #fff;
 }
 
@@ -6124,7 +6124,7 @@ span.flatpickr-weekday {
 .dark .flatpickr-day.endRange.startRange+.endRange:not(:nth-child(7n + 1)),
 .dark .flatpickr-day.selected.startRange+.endRange:not(:nth-child(7n + 1)),
 .dark .flatpickr-day.startRange.startRange+.endRange:not(:nth-child(7n + 1)) {
-  box-shadow: -10px 0 0 #5f5af6;
+  box-shadow: -10px 0 0 #465675;
 }
 
 .flatpickr-calendar.arrowTop:after,
@@ -6270,7 +6270,7 @@ span.flatpickr-weekday {
 }
 
 .dark .toastify.primary {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .toastify.secondary {
@@ -7613,7 +7613,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .gridjs-pages button.gridjs-currentPage {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .gridjs-wrapper {
@@ -9220,7 +9220,7 @@ button.gridjs-sort-desc {
 }
 
 .border-slate-150 {
-  border-color: #e9eef5;
+  border-color: #616366;
 }
 
 .border-white {
@@ -9312,7 +9312,7 @@ button.gridjs-sort-desc {
 }
 
 .border-accent {
-  border-color: #5f5af6;
+  border-color: #465675;
 }
 
 .border-b-slate-200 {
@@ -9480,7 +9480,7 @@ button.gridjs-sort-desc {
 }
 
 .bg-accent {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .bg-slate-500 {
@@ -11611,7 +11611,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:border-navy-600 {
-  border-color: #313e59;
+  border-color: #232b3a;
 }
 
 .dark .dark\:border-slate-700 {
@@ -11631,7 +11631,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:border-accent {
-  border-color: #5f5af6;
+  border-color: #465675;
 }
 
 .dark .dark\:border-navy-800 {
@@ -11683,7 +11683,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:border-r-accent {
-  border-right-color: #5f5af6;
+  border-right-color: #465675;
 }
 
 .dark .dark\:bg-navy-900 {
@@ -11703,7 +11703,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:bg-accent {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .dark .dark\:bg-navy-750 {
@@ -11835,7 +11835,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:fill-accent {
-  fill: #5f5af6;
+  fill: #465675;
 }
 
 .dark .dark\:stroke-accent-light {
@@ -11863,7 +11863,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:text-accent-light\/80 {
-  color: rgba(129, 140, 248, 0.8);
+  color: #a5a6ad;
 }
 
 .dark .dark\:text-white {
@@ -11871,7 +11871,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:text-accent {
-  color: #5f5af6;
+  color: #465675;
 }
 
 .dark .dark\:text-secondary-light {
@@ -11929,7 +11929,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:ring-accent {
-  --tw-ring-color: #5f5af6;
+  --tw-ring-color: #465675;
 }
 
 .dark .dark\:placeholder\:text-navy-300::placeholder {
@@ -11946,7 +11946,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:before\:bg-accent:before {
-  background-color: #5f5af6;
+  background-color: #465675;
   content: var(--tw-content);
 }
 
@@ -11971,7 +11971,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:checked\:border-accent:checked {
-  border-color: #5f5af6;
+  border-color: #465675;
 }
 
 .dark .dark\:checked\:border-secondary-light:checked {
@@ -11991,7 +11991,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:checked\:bg-accent:checked {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .dark .dark\:checked\:bg-secondary-light:checked {
@@ -12004,7 +12004,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:checked\:before\:bg-accent:checked:before {
-  background-color: #5f5af6;
+  background-color: #465675;
   content: var(--tw-content);
 }
 
@@ -12019,7 +12019,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:focus-within\:\!border-accent:focus-within {
-  border-color: #5f5af6 !important;
+  border-color: #465675 !important;
 }
 
 .dark .dark\:hover\:border-navy-400:hover {
@@ -12027,7 +12027,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:hover\:border-accent:hover {
-  border-color: #5f5af6;
+  border-color: #465675;
 }
 
 .dark .dark\:hover\:border-secondary-light:hover {
@@ -12047,7 +12047,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:hover\:bg-accent:hover {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .dark .dark\:hover\:bg-navy-600:hover {
@@ -12099,7 +12099,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:hover\:text-accent:hover {
-  color: #5f5af6;
+  color: #465675;
 }
 
 .dark .dark\:hover\:text-navy-100:hover {
@@ -12129,7 +12129,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:focus\:border-accent:focus {
-  border-color: #5f5af6;
+  border-color: #465675;
 }
 
 .dark .dark\:focus\:border-secondary-light:focus {
@@ -12149,7 +12149,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:focus\:bg-accent:focus {
-  background-color: #5f5af6;
+  background-color: #465675;
 }
 
 .dark .dark\:focus\:bg-navy-600:focus {
@@ -12197,7 +12197,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .dark\:focus\:text-accent:focus {
-  color: #5f5af6;
+  color: #465675;
 }
 
 .dark .dark\:focus\:text-navy-100:focus {
@@ -12271,7 +12271,7 @@ button.gridjs-sort-desc {
 }
 
 .dark .group:hover .dark\:group-hover\:text-accent {
-  color: #5f5af6;
+  color: #465675;
 }
 
 .dark .group:focus .dark\:group-focus\:text-accent-light {
@@ -12284,7 +12284,7 @@ button.gridjs-sort-desc {
 
 .dark .group:focus .dark\:group-focus\:text-accent,
 .dark .peer:focus~.dark\:peer-focus\:text-accent {
-  color: #5f5af6;
+  color: #465675;
 }
 
 @media print {

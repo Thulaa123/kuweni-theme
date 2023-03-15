@@ -13,9 +13,9 @@ function onStart()
 {
     $this["hash"] = Session::get("res_id");
     $this["customer"] = Customer::where("hash", "=", $this["hash"])->first();
-    //if ($this["customer"] == "") {
-    //     return Redirect::to("/validate");
-    //}
+    if ($this["customer"] == "") {
+        return Redirect::to("/validate");
+    }
 }
 ?>
 ==
@@ -29,12 +29,131 @@ function onStart()
     </div>
     <div class="mt-3 card border border-slate-150 px-4 py-4 shadow-none dark:border-navy-600 sm:px-5">
         <div>
-            <h2 class="text-lg font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">Bordered Card</h2>
+            <h2 class="text-lg font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">Ticket Details</h2>
         </div>
-        <div class="pt-2">
-            <from data-request="onPay" data-request-validate data-request-flash>
-                <button class="btn bg-primary text-white" type="submit" data-attach-loading>Pay now</button>
-            </from>
+        <div class="col-span-12 flex flex-col sm:col-span-6 lg:col-span-4">
+            <div class="mt-4 space-y-4 sm:mt-5 lg:mt-6">
+                <div class="card p-4">
+                    <div class="flex items-center space-x-3">
+                        
+                        <div>
+                            <p class="text-base font-medium text-slate-700 dark:text-navy-100">
+                            {% if customer.show_number == 1 %}
+                            June 16, 2023
+                            {% elseif customer.show_number == 2 %}
+                            June 17, 2023
+                            {% elseif customer.show_number == 5 %}
+                            June 18, 2023
+                            {% elseif customer.show_number == 3 %}
+                            June 18, 2023
+                            {% elseif customer.show_number == 4 %}
+                            June 19, 2023
+                            {% endif %}
+                            </p>
+                            <p class="text-xs text-slate-400 line-clamp-1 dark:text-dark">Concert Date</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-4">
+                    <div class="flex items-center space-x-3">
+                       
+                        <div>
+                            <p class="text-base font-medium text-slate-700 dark:text-navy-100">
+                            {% if customer.show_number == 1 %}
+                            7:30 PM
+                            {% elseif customer.show_number == 2 %}
+                            7:30 PM
+                            {% elseif customer.show_number == 5 %}
+                            5:00 PM
+                            {% elseif customer.show_number == 3 %}
+                            8:00 PM
+                            {% elseif customer.show_number == 4 %}
+                            7:30 PM
+                            {% endif %}
+                            </p>
+                            <p class="text-xs text-slate-400 line-clamp-1 dark:text-dark">Concert Starting Time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-4">
+                    <div class="flex items-center space-x-3">
+                        
+                        <div>
+                            <p class="text-base font-medium text-slate-700 dark:text-navy-100">
+                            Nelum Pokuna, Colombo
+                            </p>
+                            <p class="text-xs text-slate-400 line-clamp-1 dark:text-dark">Concert Venue</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="card p-4">
+                    <div class="flex items-center space-x-3">
+                        
+                        <div>
+                            <p class="text-base font-medium text-slate-700 dark:text-navy-100">
+                            {{ customer.ticket_tier }}
+                            </p>
+                            <p class="text-xs text-slate-400 line-clamp-1 dark:text-dark">Ticket Tire</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-4">
+                    <div class="flex items-center space-x-3">
+                        
+                        <div>
+                            <p class="text-base font-medium text-slate-700 dark:text-navy-100">
+                            {{ customer.ticket_count }}
+                            </p>
+                            <p class="text-xs text-slate-400 line-clamp-1 dark:text-dark">Number of tickets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-4">
+                    <div class="flex items-center space-x-3">
+                        
+                        <div>
+                            <p class="text-base font-medium text-slate-700 dark:text-navy-100">
+                            {% if customers.payment_status == 0 %}
+                              <div class="badge bg-warning/10 text-warning dark:bg-warning/15">Pending Payment</div>
+                            {% elseif customers.payment_status == 1 %}
+                              <div class="badge bg-success/10 text-success dark:bg-success/15">Paid</div>
+                            {% endif %}
+                            </p>
+                            <p class="text-xs text-slate-400 line-clamp-1 dark:text-dark">Payment Status</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="card p-4">
+                    <div class="flex items-center space-x-3">
+                        <div>
+                        {% if customers.payment_status == 0 %}
+                            <p class="text-warning font-medium text-slate-800 dark:text-warning" style="font-size: 25px;">
+                            {{ customer.total_count }}
+                            </p>
+                            <p class="text-warning text-slate-400 line-clamp-1 dark:text-dark m-3">Total Last Amount</p>
+                        {% elseif customers.payment_status == 1 %}
+                            <p class="text-success font-medium text-slate-800 dark:text-success" style="font-size: 25px;">
+                            {{ customer.total_count }}
+                            </p>
+                            <p class="text-success text-slate-400 line-clamp-1 dark:text-success m-3">Total Last Amount</p>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <p style="margin: 20px;">
+            If you find any issues with your reservation, please contact us.
+            The Payment Status may take some time to update with our settlement provider, but please do not worry as we have everything under control on our end.
+            Thank you for your trust, patience, and unwavering support from the past to the future at KUWENI.
+        </p>
+        <div class="my-4 h-px  bg-slate-200 dark:bg-navy-500"></div>
+        {% if customers.payment_status == 0 %}
+        <div class="pt-2 mt-2">
+            <form data-request="onPay" data-request-validate data-request-flash>
+                <button class="btn bg-primary text-white btn-lg" type="submit" data-attach-loading style="width: 100%; background-color: #000;">Pay now</button>
+            </form>
+        </div>
+        {% endif %}
     </div>
 </main>
